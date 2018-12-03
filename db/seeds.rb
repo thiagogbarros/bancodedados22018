@@ -118,3 +118,94 @@ description: 'Classe Alta'
 ])
 
 puts "Created #{Population.count} Populations"
+
+State.destroy_all
+
+State.create!([{
+  description: 'Amazonas'
+},
+{
+  description: 'Mato Grosso'
+},
+{
+  description: 'Pará'
+},
+{
+  description: 'Distrito Federal'
+},
+{
+  description: 'Minas Gerais'
+},
+{
+  description: 'Rio de Janeiro'
+},
+{
+  description: 'São Paulo'
+},
+{
+  description: 'Maranhão'
+},
+{
+  description: 'Bahia'
+},
+{
+  description: 'Santa Catarina'
+}
+])
+
+Office.destroy_all
+
+Office.create!([{
+  description: 'Deputado federal',
+  power_id: 1
+},
+{
+  description: 'Senador',
+  power_id: 1
+},
+{
+  description: 'Deputado Estadual',
+  power_id: 1
+},
+{
+  description: 'Vereador',
+  power_id: 1
+},
+{
+  description: 'Presidente',
+  power_id: 2
+},
+{
+  description: 'Governador',
+  power_id: 2
+},
+{
+  description: 'Prefeito',
+  power_id: 2
+}
+])
+
+
+Person.destroy_all
+
+Person.create!([{
+  name: 'Jair Bolsonaro',
+  party_id: 5,
+  office_id: 5
+},
+{
+  name: 'Luiz Inácio Lula da Silva',
+  party_id: 3,
+  office_id: 5
+},
+{
+  name: 'João Amoêdo',
+  party_id: 6,
+  office_id: 5
+},
+{
+  name: 'Luiz Inácio Lula da Silva',
+  party_id: 3,
+  office_id: 5
+}
+])
