@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fake_news: one
+  communication: one
+
+two:
+  fake_news: two
+  communication: two
