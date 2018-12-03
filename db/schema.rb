@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_03_194809) do
+ActiveRecord::Schema.define(version: 2018_12_03_204337) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -47,7 +47,9 @@ ActiveRecord::Schema.define(version: 2018_12_03_194809) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "content"
+    t.bigint "person_id"
     t.index ["font_id"], name: "index_fake_news_on_font_id"
+    t.index ["person_id"], name: "index_fake_news_on_person_id"
     t.index ["population_id"], name: "index_fake_news_on_population_id"
     t.index ["scale_id"], name: "index_fake_news_on_scale_id"
   end
@@ -134,6 +136,7 @@ ActiveRecord::Schema.define(version: 2018_12_03_194809) do
   end
 
   add_foreign_key "fake_news", "fonts"
+  add_foreign_key "fake_news", "people"
   add_foreign_key "fake_news", "populations"
   add_foreign_key "fake_news", "scales"
   add_foreign_key "news_communications", "communications"
