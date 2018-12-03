@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  font: one
+  scale: one
+  population: one
+
+two:
+  title: MyString
+  font: two
+  scale: two
+  population: two

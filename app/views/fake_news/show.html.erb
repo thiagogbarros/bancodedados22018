@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @fake_news.title %>
+</p>
+
+<p>
+  <strong>Font:</strong>
+  <%= @fake_news.font %>
+</p>
+
+<p>
+  <strong>Scale:</strong>
+  <%= @fake_news.scale %>
+</p>
+
+<p>
+  <strong>Population:</strong>
+  <%= @fake_news.population %>
+</p>
+
+<%= link_to 'Edit', edit_fake_news_path(@fake_news) %> |
+<%= link_to 'Back', fake_news_index_path %>

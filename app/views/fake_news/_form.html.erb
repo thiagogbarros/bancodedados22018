@@ -1,0 +1,37 @@
+<%= form_with(model: fake_news, local: true) do |form| %>
+  <% if fake_news.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fake_news.errors.count, "error") %> prohibited this fake_news from being saved:</h2>
+
+      <ul>
+      <% fake_news.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :font_id %>
+    <%= form.text_field :font_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :scale_id %>
+    <%= form.text_field :scale_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :population_id %>
+    <%= form.text_field :population_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

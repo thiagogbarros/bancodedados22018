@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fake News</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Font</th>
+      <th>Scale</th>
+      <th>Population</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fake_news.each do |fake_news| %>
+      <tr>
+        <td><%= fake_news.title %></td>
+        <td><%= fake_news.font %></td>
+        <td><%= fake_news.scale %></td>
+        <td><%= fake_news.population %></td>
+        <td><%= link_to 'Show', fake_news %></td>
+        <td><%= link_to 'Edit', edit_fake_news_path(fake_news) %></td>
+        <td><%= link_to 'Destroy', fake_news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fake News', new_fake_news_path %>
