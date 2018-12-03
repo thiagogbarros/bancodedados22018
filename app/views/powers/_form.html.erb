@@ -1,22 +1,86 @@
-<%= form_with(model: power, local: true) do |form| %>
-  <% if power.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(power.errors.count, "error") %> prohibited this power from being saved:</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-      <ul>
-      <% power.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    <title>Area de cadastro</title>
+
+    <!-- Bootstrap core CSS -->
+    <%= stylesheet_link_tag "vendor/bootstrap/css/bootstrap.min.css" %>
+
+    <!-- Custom fonts for this template -->
+    <%= stylesheet_link_tag "vendor/fontawesome-free/css/all.min.css" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" %>
+
+    <!-- Custom styles for this template -->
+    <%= stylesheet_link_tag "css/clean-blog.min.css" %>
+
+  </head>
+
+  <body>
+    <!-- Page Header -->
+    <header class="masthead altura" style="background-color: #232FB2">
+      <div class="overlay "></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading centraliza">
+              <h1 style="text-align: center">Poderes</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <%= form_with(model: power, local: true) do |form| %>
+              <% if power.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(power.errors.count, "error") %> prohibited this power from being saved:</h2>
+
+                  <ul>
+                  <% power.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+              <div class="field">
+                <%= form.label :Descrição %>
+                <%= form.text_field :description %>
+              </div>
+
+              <div class="actions">
+                <%= form.submit %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+    <!-- Bootstrap core JavaScript -->
+    <%= javascript_include_tag "vendor/jquery/jquery.min.js" %>
+    <%= javascript_include_tag "vendor/bootstrap/js/bootstrap.bundle.min.js" %>
+
+    <!-- Custom scripts for this template -->
+    <%= javascript_include_tag "js/clean-blog.min.js" %>
+
+  </body>
+
+</html>
+
+

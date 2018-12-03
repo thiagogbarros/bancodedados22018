@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div class="container" style="margin-top:3em">
 
-<p>
-  <strong>Description:</strong>
-  <%= @party.description %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_party_path(@party) %> |
-<%= link_to 'Back', parties_path %>
+  <p>
+    <strong>Descrição:</strong>
+    <%= @party.description %>
+  </p>
+
+  <%= link_to 'Edit', edit_party_path(@party) %> |
+  <%= link_to 'Back', parties_path %>
+</div>

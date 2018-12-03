@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div class="container" style="margin-top:3em">
 
-<p>
-  <strong>Description:</strong>
-  <%= @power.description %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_power_path(@power) %> |
-<%= link_to 'Back', powers_path %>
+  <p>
+    <strong>Descrição:</strong>
+    <%= @power.description %>
+  </p>
+
+  <%= link_to 'Edit', edit_power_path(@power) %> |
+  <%= link_to 'Back', powers_path %>
+</div>

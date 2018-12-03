@@ -44,14 +44,15 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <table>
+            <table class="table">
               <thead>
                 <tr>
                   <th>Titulo</th>
                   <th>Fonte</th>
                   <th>Escala</th>
                   <th>Classe</th>
-                  <th colspan="3"></th>
+                  <th>Conteúdo</th>
+                  <th colspan="4"></th>
                 </tr>
               </thead>
 
@@ -62,10 +63,13 @@
                     <td><%= fake_news.font.description %></td>
                     <td><%= fake_news.scale.description %></td>
                     <td><%= fake_news.population.description %></td>
+                    <td><%= fake_news.content %></td>
+                    <td><%= image_tag(fake_news.image, class:"imaginha") %></td>
                     <td><%= link_to 'Show', fake_news %></td>
                     <td><%= link_to 'Edit', edit_fake_news_path(fake_news) %></td>
                     <td><%= link_to 'Destroy', fake_news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                   </tr>
+
                 <% end %>
               </tbody>
             </table>

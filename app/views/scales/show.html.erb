@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div class="container" style="margin-top:3em">
 
-<p>
-  <strong>Description:</strong>
-  <%= @scale.description %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_scale_path(@scale) %> |
-<%= link_to 'Back', scales_path %>
+  <p>
+    <strong>Descrição:</strong>
+    <%= @scale.description %>
+  </p>
+
+  <%= link_to 'Edit', edit_scale_path(@scale) %> |
+  <%= link_to 'Back', scales_path %>
+</div>

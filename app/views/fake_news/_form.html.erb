@@ -1,42 +1,112 @@
-<%= form_with(model: fake_news, local: true) do |form| %>
-  <% if fake_news.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(fake_news.errors.count, "error") %> prohibited this fake_news from being saved:</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-      <ul>
-      <% fake_news.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <div class="field">
-    <%= form.label :font_id %>
-    <%= form.text_field :font_id %>
-  </div>
+    <title>Area de cadastro</title>
 
-  <div class="field">
-    <%= form.label :scale_id %>
-    <%= form.text_field :scale_id %>
-  </div>
+    <!-- Bootstrap core CSS -->
+    <%= stylesheet_link_tag "vendor/bootstrap/css/bootstrap.min.css" %>
 
-  <div class="field">
-    <%= form.label :population_id %>
-    <%= form.text_field :population_id %>
-  </div>
+    <!-- Custom fonts for this template -->
+    <%= stylesheet_link_tag "vendor/fontawesome-free/css/all.min.css" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" %>
 
-  <div class="field">
-    <%= form.label :imagem %>
-    <%= form.file_field :image %>
-  </div>
+    <!-- Custom styles for this template -->
+    <%= stylesheet_link_tag "css/clean-blog.min.css" %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+  </head>
+
+  <body>
+    <!-- Page Header -->
+    <header class="masthead altura" style="background-color: #232FB2">
+      <div class="overlay "></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading centraliza">
+              <h1 style="text-align: center">Fake news</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <%= form_with(model: fake_news, local: true) do |form| %>
+              <% if fake_news.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(fake_news.errors.count, "error") %> prohibited this fake_news from being saved:</h2>
+
+                  <ul>
+                  <% fake_news.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+            <div class="container">
+              <div class="field">
+                <%= form.label :Título %>
+                <%= form.text_field :title , class:"form-control"%>
+              </div>
+
+              <div class="field">
+                <%= form.label :id_fonte %>
+                <%= form.text_field :font_id, class:"form-control" %>
+              </div>
+
+              <div class="field">
+                <%= form.label :id_escala %>
+                <%= form.text_field :scale_id, class:"form-control" %>
+              </div>
+
+              <div class="field">
+                <%= form.label :id_classe %>
+                <%= form.text_field :population_id, class:"form-control" %>
+              </div>
+
+              <div class="field">
+                <%= form.label :imagem %>
+                <%= form.file_field :image %>
+              </div>
+
+              <div class="field">
+                <%= form.label :Conteúdo %>
+                <%= form.text_field :content , class:"form-control"%>
+              </div>
+
+              <div class="actions">
+                <%= form.submit %>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+    <!-- Bootstrap core JavaScript -->
+    <%= javascript_include_tag "vendor/jquery/jquery.min.js" %>
+    <%= javascript_include_tag "vendor/bootstrap/js/bootstrap.bundle.min.js" %>
+
+    <!-- Custom scripts for this template -->
+    <%= javascript_include_tag "js/clean-blog.min.js" %>
+
+  </body>
+
+</html>
+
+

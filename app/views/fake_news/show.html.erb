@@ -1,24 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="container" style="margin-top:3em">
 
-<p>
-  <strong>Title:</strong>
-  <%= @fake_news.title %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Font:</strong>
-  <%= @fake_news.font %>
-</p>
+  <p>
+    <strong>Titulo:</strong>
+    <%= @fake_news.title %>
+  </p>
 
-<p>
-  <strong>Scale:</strong>
-  <%= @fake_news.scale %>
-</p>
+  <p>
+    <strong>Fonte:</strong>
+    <%= @fake_news.font.description %>
+  </p>
 
-<p>
-  <strong>Population:</strong>
-  <%= @fake_news.population %>
-</p>
+  <p>
+    <strong>Escala:</strong>
+    <%= @fake_news.scale.description %>
+  </p>
 
-<%= link_to 'Edit', edit_fake_news_path(@fake_news) %> |
-<%= link_to 'Back', fake_news_index_path %>
+  <p>
+    <strong>Classe:</strong>
+    <%= @fake_news.population.description %>
+  </p>
+
+  <p>
+    <strong>Conteúdo:</strong>
+    <%= @fake_news.content %>
+  </p>
+
+  <p>
+    <strong>Imagem:</strong>
+    <%= image_tag(@fake_news.image, class:"imaginha") %>  </p>
+
+  <%= link_to 'Edit', edit_fake_news_path(@fake_news) %> |
+  <%= link_to 'Back', fake_news_index_path %>
+</div>
