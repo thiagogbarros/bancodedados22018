@@ -69,6 +69,6 @@ class FakeNewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fake_news_params
-      params.require(:fake_news).permit(:title, :font_id, :scale_id, :population_id)
+      params.require(:fake_news).permit(:title, :font_id, :scale_id, :population_id, :image)
     end
 end

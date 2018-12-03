@@ -1,27 +1,86 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
 
-<h1>Parties</h1>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <tbody>
-    <% @parties.each do |party| %>
-      <tr>
-        <td><%= party.description %></td>
-        <td><%= link_to 'Show', party %></td>
-        <td><%= link_to 'Edit', edit_party_path(party) %></td>
-        <td><%= link_to 'Destroy', party, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <title>Area de cadastro</title>
 
-<br>
+    <!-- Bootstrap core CSS -->
+    <%= stylesheet_link_tag "vendor/bootstrap/css/bootstrap.min.css" %>
 
-<%= link_to 'New Party', new_party_path %>
+    <!-- Custom fonts for this template -->
+    <%= stylesheet_link_tag "vendor/fontawesome-free/css/all.min.css" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" %>
+
+    <!-- Custom styles for this template -->
+    <%= stylesheet_link_tag "css/clean-blog.min.css" %>
+
+  </head>
+
+  <body>
+    <!-- Page Header -->
+    <header class="masthead altura" style="background-color: #232FB2">
+      <div class="overlay "></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading centraliza">
+              <h1 style="text-align: center">Partidos</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Descrição</th>
+                  <th colspan="3"></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <% @parties.each do |party| %>
+                  <tr>
+                    <td><%= party.description %></td>
+                    <td><%= link_to 'Show', party %></td>
+                    <td><%= link_to 'Edit', edit_party_path(party) %></td>
+                    <td><%= link_to 'Destroy', party, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+
+            <br>
+
+            <%= link_to 'Novo partido', new_party_path %>
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+    <!-- Bootstrap core JavaScript -->
+    <%= javascript_include_tag "vendor/jquery/jquery.min.js" %>
+    <%= javascript_include_tag "vendor/bootstrap/js/bootstrap.bundle.min.js" %>
+
+    <!-- Custom scripts for this template -->
+    <%= javascript_include_tag "js/clean-blog.min.js" %>
+
+  </body>
+
+</html>
