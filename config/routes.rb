@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :communications
   resources :parties
   resources :fonts
   resources :scales
