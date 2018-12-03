@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :states
   resources :fake_news
   resources :people
   resources :offices
